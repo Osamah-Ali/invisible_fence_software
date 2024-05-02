@@ -57,10 +57,6 @@ def alarm():
     socketio.emit('notification', {'data':data})
     return 'message received'
 
-@app.route('/fetch_data', methods=['GET'])
-def fetch_data():
-    time.sleep(5)
-    return jsonify({})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(sys.argv[1]))
